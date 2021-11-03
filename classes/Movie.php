@@ -26,33 +26,33 @@ class Movie{
 
 
     // SET
-    public function setTitle($_infos) {
-        if ( is_string($_infos["title"]) ) {
-            $this->infos["title"] = $_infos["title"];
+    function setTitle($_title) {
+       if (is_string($_title)){
+         $this->infos["title"] = $_title;
+       } 
+    }
+
+    function setYear($_year) {
+        if(is_numeric($_year)){
+            $this->infos["year"] = $_year;
         }
     }
 
-    public function setYear($_infos) {
-        if ( is_numeric($_infos["year"]) ) {
-            $this->infos["year"] = $_infos["year"];
+    function setDirector($_director) {
+        if(is_string($_director)){
+            $this->infos["director"] = $_director;
         }
     }
 
-    public function setDirector($_infos) {
-        if ( is_string($_infos["director"]) ) {
-            $this->infos["director"] = $_infos["director"];
+    function setLanguage($_language) {
+        if ( is_string($_language) ) {
+            $this->infos["language"] = $_language;
         }
     }
 
-    public function setLanguage($_infos) {
-        if ( is_string($_infos["language"]) ) {
-            $this->infos["language"] = $_infos["language"];
-        }
-    }
-
-    public function setRating($_infos) {
-        if ( is_numeric($_infos["rating"]) ) {
-            $this->infos["rating"] = $_infos["rating"];
+    function setRating($_rating) {
+        if ( is_numeric($_rating) ) {
+            $this->infos["rating"] = $_rating;
         }
     }
 
@@ -60,25 +60,25 @@ class Movie{
 
 
     // GET
-    function getInfo($value) {
-        return $this->infos[$value];
+    function getTitle() {
+        return $this->infos["title"];
     }
 
-    // function getYear(){
-    //     return $this->infos["year"];
-    // }
+    function getYear(){
+        return $this->infos["year"];
+    }
 
-    // function getDirector(){
-    //     return $this->infos["director"];
-    // }
+    function getDirector(){
+        return $this->infos["director"];
+    }
 
-    // function getLanguage(){
-    //     return $this->infos["language"];
-    // }
+    function getLanguage(){
+        return $this->infos["language"];
+    }
 
-    // function getRating(){
-    //     return $this->infos["rating"];
-    // }
+    function getRating(){
+        return $this->infos["rating"];
+    }
    
     
 

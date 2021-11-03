@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/classes/Movie.php';
 
+
+
 $movies= [
     // $backToFuture = new Movie('Back to future: part I', 1985, 'Robert Zemeckis', 'ENG', 5);
     new Movie(
@@ -22,7 +24,9 @@ $movies= [
             "rating"=>5
         ]
     )
-]
+];
+
+
 
 ?>
 
@@ -40,19 +44,23 @@ $movies= [
       
         <?php foreach($movies as $movie) :  ?>
             <li>
-                <h2><?= $movie -> getInfo('title')?> </h2>
+                <h2>TITLE: <?= $movie -> getTitle()?> </h2>
             </li>
             <li>
-                <?= $movie -> getInfo('year')?> 
+                <strong>YEAR:</strong>
+                <?= $movie -> getYear()?> 
             </li>
             <li>
-                <?= $movie -> getInfo('director')?> 
+                <strong>DIRECTOR:</strong>
+                <?= $movie -> getDirector()?> 
             </li>
             <li>
-                <?= $movie -> getInfo('language')?> 
+                <strong> LANGUAGE:</strong>
+                <?= $movie -> getLanguage()?> 
             </li>
             <li>
-                <?= $movie -> getInfo('rating')?> 
+                <strong>RATING:</strong>
+                <?= $movie -> getRating()?> 
             </li>
             
         <?php endforeach?> 
